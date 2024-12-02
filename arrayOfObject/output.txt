@@ -1,2 +1,3 @@
-Max: Charlie  martir  19
-Min: Bob malta  22
+Alice package  20 90
+Charlie  martir  19 90
+Bob malta  22 80
