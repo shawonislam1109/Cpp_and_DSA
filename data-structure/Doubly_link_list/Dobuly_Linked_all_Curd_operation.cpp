@@ -157,10 +157,10 @@ int main()
     insert_at_tail(tail, 500);
 
     // delete at head
-    deleted_at_head(head);
+    deleted_at_head(head, tail);
 
     // delete at tail
-    deleted_at_tail(tail);
+    deleted_at_tail(tail, head);
 
     // delete at any position
     delete_at_any_position(head, 1);
