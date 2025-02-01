@@ -19,7 +19,6 @@
 // Add other commonly used headers as needed
 using namespace std;
 
-// Node class for linked list
 class Node
 {
 public:
@@ -32,17 +31,22 @@ public:
     }
 };
 
-// insert at head in linked list
-void insert_at_head(Node *&head, int val)
+// insert in any position in linked list
+void insert_any_position(Node *&head, int index, int val)
 {
 
-    Node *new_node = new Node(val);
-    new_node->next = head;
-    head = new_node;
+    Node *newNode = new Node(val);
+    Node *temp = head;
+    for (int i = 1; i < index; i++)
+    {
+        temp = temp->next;
+    }
+    newNode->next = temp->next;
+    temp->next = newNode;
 };
 
-// print linked list
-void linked_list_print(Node *head)
+// print node
+void print_node_linked_list(Node *head)
 {
     Node *temp = head;
     while (temp != NULL)
@@ -51,24 +55,17 @@ void linked_list_print(Node *head)
         temp = temp->next;
     }
 };
-
-// main fuction
 int main()
 {
-    Node *head = new Node(10);
-    Node *a = new Node(20);
-    Node *b = new Node(30);
 
+    Node *head = new Node(30);
+    Node *a = new Node(10);
+    Node *b = new Node(50);
     head->next = a;
     a->next = b;
 
-    // insert in head
-    insert_at_head(head, 300);
-    insert_at_head(head, 500);
-    insert_at_head(head, 600);
+    insert_any_position(head, 2, 2383);
 
-    // print liked list function
-    linked_list_print(head);
-
+    print_node_linked_list(head);
     return 0;
 }

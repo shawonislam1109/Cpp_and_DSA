@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.ejs": "html",
+    "vector": "cpp",
+    "queue": "cpp",
+    "ostream": "cpp",
+    "cstring": "cpp",
+    "iosfwd": "cpp"
+  }
+}

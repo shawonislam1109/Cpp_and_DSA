@@ -19,21 +19,21 @@
 #include <list>
 // Add other commonly used headers as needed
 using namespace std;
+using namespace std;
 
 int main()
 {
     int Q;
     cin >> Q;
-
     list<int> linkedList;
 
     while (Q--)
     {
         int X, V;
         cin >> X >> V;
+
         if (X == 0)
         {
-
             linkedList.push_front(V);
         }
         else if (X == 1)
@@ -42,9 +42,12 @@ int main()
         }
         else if (X == 2)
         {
-            auto it = linkedList.begin();
-            advance(it, V);
-            linkedList.erase(it);
+            if (V >= 0 && V < linkedList.size())
+            {
+                auto it = linkedList.begin();
+                advance(it, V);
+                linkedList.erase(it);
+            }
         }
 
         cout << "L -> ";
@@ -53,6 +56,7 @@ int main()
             cout << *it << " ";
         }
         cout << endl;
+
         cout << "R -> ";
         for (auto it = linkedList.rbegin(); it != linkedList.rend(); ++it)
         {
