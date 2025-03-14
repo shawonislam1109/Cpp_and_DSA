@@ -1,0 +1,13 @@
+Shortest dist 3 to 0 : 0
+Shortest dist 3 to 1 : 2
+Shortest dist 3 to 2 : 1
+Shortest dist 3 to 3 : 0
+Shortest dist 3 to 4 : 5
+
+
+shorted path printing
+Shortest Path form 3 to 0 : 3 0 
+Shortest Path form 3 to 1 : 3 2 1 
+Shortest Path form 3 to 2 : 3 2 
+Shortest Path form 3 to 3 : 3 
+Shortest Path form 3 to 4 : 3 4 
